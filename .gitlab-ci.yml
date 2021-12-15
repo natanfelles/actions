@@ -1,0 +1,10 @@
+---
+image: registry.gitlab.com/aplus-framework/images/base:1
+
+test:php:
+  stage: test
+  before_script:
+    - composer install
+  script:
+    - vendor/bin/phpunit --colors=never
+  coverage: '/^\s*Lines:\s*\d+.\d+\%/'
