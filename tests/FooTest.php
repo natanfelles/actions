@@ -14,6 +14,7 @@ class FooTest extends TestCase
     public function testBar() : void
     {
         $foo = new Foo();
-        self::assertSame('Xurupita', $foo->bar(24));
+        self::assertSame('Xurupita', $foo->bar(0));
+        self::assertSame('Mamamia', $foo->bar(24));
     }
 }
