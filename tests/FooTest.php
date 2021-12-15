@@ -13,6 +13,7 @@ class FooTest extends TestCase
 {
     public function testBar() : void
     {
+        // Tá chovendo aí?
         $foo = new Foo();
         self::assertSame('Xurupita', $foo->bar(0));
         self::assertSame('Mamamia', $foo->bar(24));
