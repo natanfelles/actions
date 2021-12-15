@@ -9,12 +9,12 @@
  */
 class Foo
 {
-    public function bar($var)
+    public function bar(int $var) : string
     {
         if ($var === 300) {
             return 'Sparta!';
         }
-        if (false) {
+        if (false !== (bool) $var) {
             return 'Mamamia';
         }
         return 'Xurupita';
