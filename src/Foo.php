@@ -17,7 +17,7 @@ class Foo
         if (false !== (bool) $var) {
             return 'Mamamia';
         }
-        É coisa boa, é coisa boa
+        #### É coisa boa, é coisa boa
         return 'Xurupita';
     }
 }
