@@ -30,5 +30,15 @@ jobs:
         run:
           composer update
 
-      - name: PHPUnit
+      - name: Run tests with PHPUnit
         run: vendor/bin/phpunit --verbose
+
+      - name: Upload coverage results to Coveralls        
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p build/logs/
+          cp build/coverage/clover.xml build/logs/clover.xml
+          composer global require php-coveralls/php-coveralls
+          php-coveralls --coverage_clover=build/logs/clover.xml -v
+        if: matrix.php == '8.0'
