@@ -30,7 +30,23 @@ jobs:
         run:
           composer update
 
-      - name: Run tests with PHPUnit
+      - name: Composer normalize
+        run:
+          composer normalize --dry-run --indent-size=4 --indent-style=space
+
+      - name: Coding Standard
+        run:
+          vendor/bin/php-cs-fixer fix --diff --dry-run --verbose
+
+      - name: PHPMD
+        run:
+          vendor/bin/phpmd src xml phpmd.xml
+
+      - name: PHPStan
+        run:
+          vendor/bin/phpstan analyse -vvv
+
+      - name: PHPUnit
         run: vendor/bin/phpunit --verbose
 
       - name: Upload coverage results to Coveralls
