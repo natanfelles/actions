@@ -7,6 +7,9 @@ class Foo
         if($var === 300) {
             return 'Sparta!';
         }
+        if(false) {
+            return 'Mamamia';
+        }
         return 'Xurupita';
     }
 }

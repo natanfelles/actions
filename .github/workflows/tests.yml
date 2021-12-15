@@ -33,7 +33,7 @@ jobs:
       - name: Run tests with PHPUnit
         run: vendor/bin/phpunit --verbose
 
-      - name: Upload coverage results to Coveralls        
+      - name: Upload coverage results to Coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
