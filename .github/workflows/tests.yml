@@ -41,7 +41,7 @@ jobs:
 
       - name: Install dependencies
         run:
-          composer update
+          composer update --no-dev
 
       # - name: Composer normalize
       #   run:
@@ -59,8 +59,8 @@ jobs:
       #   run:
       #     vendor/bin/phpstan analyse -vvv
 
-      - name: PHPUnit
-        run: vendor/bin/phpunit --verbose
+      # - name: PHPUnit
+      #   run: vendor/bin/phpunit --verbose
 
       # - name: Upload coverage results to Coveralls
       #   env:
