@@ -1,6 +1,8 @@
 {
     "require": {
-        "aplus/framework": "dev-master"
+        "aplus/aplus": "dev-master",
+        "aplus/app": "dev-master",
+        "aplus/one": "dev-master"
     },
     "require-dev": {
         "ext-xdebug": "*",
