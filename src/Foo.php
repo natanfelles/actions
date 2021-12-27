@@ -15,7 +15,7 @@ class Foo
     public function bar(int $var) : string
     {
         if ($var === 300) {
-            return 'Sparta!'; // Do you do you do?
+            return 'Sparta!'; // Ok.
         }
         if (false !== (bool) $var) {
             return 'Mamamia';
