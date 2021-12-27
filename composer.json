@@ -1,4 +1,7 @@
 {
+    "require": {
+        "aplus/framework": "dev-master"
+    },
     "require-dev": {
         "ext-xdebug": "*",
         "aplus/coding-standard": "^1.9",
@@ -15,6 +18,9 @@
         ]
     },
     "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        },
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
