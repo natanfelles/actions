@@ -18,19 +18,7 @@ class Foo
             return 'Sparta!';
         }
         if (false !== (bool) $var) {
-            return 'Mamamia'
-
-
-
-
-
-
-
-
-
-
-
-            ;
+            return 'Mamamia';
         }
         // É coisa boa, é coisa boa
         return 'Xurupita';
