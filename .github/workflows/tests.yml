@@ -14,9 +14,10 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
+        learn: ['sentir', 'cheirar', 'ouvir', 'ver', 'falar']
         php: ['8.0', '8.1']
 
-    name: PHP ${{ matrix.php }}
+    name: PHP ${{ matrix.php }} - ${{ matrix.learn }}
 
     steps:
       - name: Checkout
