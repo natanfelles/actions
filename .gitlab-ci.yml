@@ -1,4 +1,5 @@
 ---
+# foo
 image: registry.gitlab.com/aplus-framework/images/base:1
 
 include:
